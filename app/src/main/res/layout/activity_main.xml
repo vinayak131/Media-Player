@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/path_show"
+        android:layout_height="wrap_content"
+        android:text="Please Select Media File"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Select File"
+        android:id="@+id/path_picker"/>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="5dp"
+          android:background="@color/purple_500"
+          android:id="@+id/v1"
+          android:layout_below="@id/path_picker"/>
+
+    <ImageView
+        android:id="@+id/imageinmid"
+        android:layout_width="wrap_content"
+        android:layout_height="370dp"
+        android:layout_below="@+id/v1"/>
+
+
+    <View android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/purple_500"
+        android:id="@+id/v2"
+        android:layout_below="@id/imageinmid"
+        android:layout_marginBottom="80dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/v2"
+        android:id="@+id/l1">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_baseline_fast_rewind_24"
+            android:id="@+id/rewind" />
+
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            android:id="@+id/play_audio"
+            android:layout_marginLeft="100dp"/>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_baseline_fast_forward_24"
+            android:id="@+id/forward"
+            android:layout_marginLeft="105dp"/>
+
+
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/l2"
+        android:layout_below="@+id/l1">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:id="@+id/textview1" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:id="@+id/textview2"/>
+
+
+
+
+    </LinearLayout>
+
+    <rm.com.audiowave.AudioWaveView
+        android:id="@+id/wave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        app:animateExpansion="true"
+        app:chunkWidth="3dp"
+        app:chunkHeight="50dp"
+        app:minChunkHeight="2dp"
+        app:chunkSpacing="1dp"
+        app:chunkRadius="1dp"
+        app:touchable="true"
+        app:waveColor="@android:color/holo_orange_dark"
+        android:layout_below="@+id/l2"
+        />
+
+
+
+
+</RelativeLayout>
+
